@@ -2,7 +2,7 @@
 
 ## Purpose of Project
 
-The purpose of this project is to refamiliarize myself with a quick React refresher. This will be my starting point in getting back into React, and an opportunity to improve my documentation skills. Wish me luck!
+The purpose of this project is to refamiliarize myself with a quick React refresher. This will be my starting point in getting back into React and an opportunity to improve my documentation skills. Wish me luck!
 
 ## Quick Overview
 
