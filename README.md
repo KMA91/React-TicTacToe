@@ -26,4 +26,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contact
 
-Feel free to contact me for any discrepancies of information, questions or concerns via [Linked In](https://www.linkedin.com/in/kevin-ma-9145a8110) or [email](mailto:kevin@kevin-ma.com). I also am always open to construct criticism!
+Feel free to contact me for any discrepancies of information, questions or concerns via [Linked In](https://www.linkedin.com/in/kevin-ma-9145a8110) or [email](mailto:kevin@kevin-ma.com). I am always open to construct criticism!
