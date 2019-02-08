@@ -2,17 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+// defines square to be used by
+// renderSquare method in Board class
+
 function Square(props) {
   return (
     <button
       className = "square"
-      onClick = { () => props.onClick()}>
+      onClick = {() => props.onClick()}>
       {props.value}
     </button>
   );
 }
 
 class Board extends React.Component {
+
+// props are passed in by the
 
   renderSquare(i) {
     return (
@@ -28,7 +33,7 @@ class Board extends React.Component {
     return (
       <div>
         <div className="board-row">
-          {this.renderSquare(0)}
+          {this.renderSquare(0)} // Values are used to check for a winner. See combinations in calculateWinner function
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
@@ -60,7 +65,7 @@ class Game extends React.Component {
     };
   }
 
-  jumpTo(step) {
+  jumpTo(step) { // method used to revert back to a previous move
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0,
@@ -68,7 +73,7 @@ class Game extends React.Component {
   }
 
   handleClick(i) {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.state.history.slice(0, this.state.stepNumber + 1); //update stepNumber
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
@@ -87,7 +92,7 @@ class Game extends React.Component {
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const winner = calculateWinner(current.squares);
+    const winner = calculateWinner(current.squares); // Pass current squares to check for winner
 
     const moves = history.map((step, move) => {
       const desc = move ?
@@ -130,6 +135,9 @@ ReactDOM.render(
   <Game />,
   document.getElementById('root')
 );
+
+// if squares passed in matches any of the lines, there's a winner!
+// if NOT, the game continues
 
 function calculateWinner(squares) {
   const lines = [
