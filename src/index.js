@@ -29,11 +29,11 @@ class Board extends React.Component {
   }
 
   render() {
-
+     // Values are used to check for a winner. See combinations in calculateWinner function
     return (
       <div>
         <div className="board-row">
-          {this.renderSquare(0)} // Values are used to check for a winner. See combinations in calculateWinner function
+          {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
